@@ -20,10 +20,4 @@ alias exip='wget http://ipecho.net/plain -O - -q ; echo'
 alias cli='curl http://www.commandlinefu.com/commands/browse/sort-by-votes/plaintext'
 alias starwars='telnet towel.blinkenlights.nl'
 alias a='echo "------------Your aliases------------";alias'
-alias sa='source ~/.bash_aliases;echo "Bash aliases sourced."'
-alias via='gksudo gedit ~/.bash_aliases &'
-alias try='gnome-open'
-alias text='gedit &'
-alias sutext='gksudo gedit &'
-
-
+alias m="bash $HOME/Scripts/call"
