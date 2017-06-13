@@ -21,3 +21,4 @@ alias cli='curl http://www.commandlinefu.com/commands/browse/sort-by-votes/plain
 alias starwars='telnet towel.blinkenlights.nl'
 alias a='echo "------------Your aliases------------";alias'
 alias m="bash $HOME/Scripts/call"
+alias reset='clear && bashit'
