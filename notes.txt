@@ -1,0 +1,39 @@
+ls
+ls -F show file types @ is a symbolic link
+ls -lhrt /etc/ r=reverse sort t=timestamp sort h=filesize readable format
+ls -ldhi shows info about directory. inode count, permissions, hardlink count, ownership, size, timestamp
+l list d directory h readable size output i inode count
+
+touch dir/file{1..5} will create 5 files 
+
+grep -E 'ion$' file #all words that end with ion
+grep -E '^bat' file #all words that start with bat
+'^bat..ion$' #both
+'[aeiou]{5}' #words with volves
+
+less is a reduced version of cat
+
+ln f1 f2 is hardlink, inode number will be the same 
+ln -s f1 f3 softlink, inode number will be +1
+
+function clean_file {
+sed -i '/^#/d;/^$/d' $1
+} #removes all commented & empty lines #-i writes changes
+
+yum list installed
+
+head -n 3 /etc/file shows top 3 lines
+tail -n 3 /etc/file/ shows bottom 3 lines
+
+rpm -V package #verifies package, uses checksum
+
+find /etc -maxdepth 1 (not recessive) -type 1 (symbolic links)
+find /dir -size +10000k -type f (regular file) -exec du -h {} \; #find files above 10MB and output filesize readable all output
+
+
+find /loc/doc -name '*.pdf' 
+-exec cp {} . \;        #finds .pdf 's and copys to . {} all outputted
+-delete 	#will delete
+-print 		#would print
+
+md5sum binfile > sum
