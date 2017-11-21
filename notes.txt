@@ -37,3 +37,41 @@ find /loc/doc -name '*.pdf'
 -print 		#would print
 
 md5sum binfile > sum
+
+~~~ Easy Key Based Authen ~~~
+ssh-keygen -t rsa
+ssh-copy-ip -i id_rsa.pub server1 
+ssh-agent bash
+ssh-add
+/etc/ssh_sshd/config
+PermitRootLogin without-password
+
+cat > file << END # will fill file before END
+
+head -n1 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+cut -f7 -d: /etc/passwd | sort | uniq (one of each) 	
+
+umask is default permissions when files created
+umask 27 is 740
+umask 77 is 700
+
+4 = Read 2 = Write 1 = Execute
+U,G,E 
+
+mkfifo mypipe
+
+!f would run the last command (!) that began with f
+
+stat file.sh more indepth rather than ls -l 
+stat -c %a file.sh gives perm numbers
+
+ci script.sh , comment, .
+rlog -b script.sh 
+co -l script.sh, locks file
+co -l -r1.1 script.sh shows that rev
+ci -f script.sh will branch depending on rev
+
+df -h > diskoutput && mail -s "Disk Free" user < diskoutput
+
+dd if=/dev/sr0 (CD drive) of=netinstall.iso (i=input o=output)
