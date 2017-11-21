@@ -1,3 +1,15 @@
+inital centos
+nmcli conn show #show interfaces
+nmcli conn up enp0s* #put them up
+sed -i s/ONBOOT=no/ONBOOT=yes/ /etc/sysconfig/network-scripts/ifcfg-enp0s*  Find/replace, autostart onboot connection
+grep ONBOOT !$ #verify (!$=last argument used)
+
+yum update
+yum install -y redhat-lsb-core net-tools kernel-headers kernel-devel
+yum groupinstall -y "Development Tools" 
+
+systemctl set-default graphical.target 
+systemctl isolate graphical.target
 ls
 ls -F show file types @ is a symbolic link
 ls -lhrt /etc/ r=reverse sort t=timestamp sort h=filesize readable format
@@ -45,6 +57,8 @@ ssh-agent bash
 ssh-add
 /etc/ssh_sshd/config
 PermitRootLogin without-password
+sed -i s/PermitRootLogin yes/PermitRootLogin without-password/ /etc/ssh_sshd/config
+
 
 cat > file << END # will fill file before END
 
