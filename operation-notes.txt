@@ -34,3 +34,7 @@ vi import content
 
 ps aux a=all u=user process' x=process with no terminal
 ps -e --forest -shows process tree
+ps -f =full -F = extra full
+ps -elf long and full listing of process, grep output
+ls /proc/ ~number named files are process' so i.e 1
+ps -p1 -f
