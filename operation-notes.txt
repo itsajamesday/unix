@@ -7,6 +7,10 @@ cmdline systemd.unit=whatev.target
 
 tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system / 
 sudo tar -xvpzf /path/to/backup.tar.gz -C /media/whatever --numeric-owner
+# vgscan --mknodes
+# vgchange -ay
+# lvscan
+# mount /dev/VolGroup00/LogVol00 /mnt
 
 ~~~resetting root pass ~~~~
 cmdline rhgh quiet -remove to see boot process
