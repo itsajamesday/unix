@@ -5,6 +5,8 @@ systemctl isolate multi-user.target -Changes run level
 
 cmdline systemd.unit=whatev.target
 
+tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system / 
+sudo tar -xvpzf /path/to/backup.tar.gz -C /media/whatever --numeric-owner
 
 ~~~resetting root pass ~~~~
 cmdline rhgh quiet -remove to see boot process
